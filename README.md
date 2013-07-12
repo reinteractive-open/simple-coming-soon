@@ -1,4 +1,4 @@
-# Simple Comming Soon Page
+# Simple Coming Soon Page
 
 So many people need a simple way to say their SaaS app is coming soon and to
 register interest of their users by capturing an email address.
