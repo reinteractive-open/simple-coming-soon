@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %></title>
+  <script src="/jquery-1.7.min.js" type="text/javascript"></script>
+  <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="/css/application.css" />
+  <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css" />
+</head>
+
+<body class="contained">
+
+  <!-- Contained template -->
+  <div class='container box'>
+    <header>
+      <div class="logo">Your Logo</div>
+      <h1>We are coming soon!</h1>
+    </header>
+    <p class="intro">
+      We are in the process of creating a cloud-based app that you will love!
+      We would tell you more... but you should just sign up to find out!
+    </p>
+    <%= yield %>
+  <div>
+
+</body>
+</html>

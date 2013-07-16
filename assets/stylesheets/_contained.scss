@@ -1,0 +1,28 @@
+/* _contained.scss */
+
+body.contained {
+  .box {
+    max-width:724px;
+    background:#fff;
+    background:rgba(255,255,255,0.9);
+    padding:40px;
+    margin-top:60px;
+    @include box-shadow;
+  }
+  header {
+    text-align:center;
+    background:none;
+    padding:0;
+    color:#333;
+    margin:0 0 40px;
+  }
+  .logo {
+    color:#333;
+    margin:0 0 24px;
+  }
+}
+@media (max-width: 760px) {
+  body.contained {
+    margin:40px;
+  }
+}

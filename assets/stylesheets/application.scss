@@ -1,0 +1,271 @@
+/* ------------------- Colour Themes ------------------- */
+
+/* Subtle greys */
+
+$light-grey:      #f8f8f8;
+$medium-grey:     #f2f2f2;
+
+/* Muted blue green tones */ 
+
+$navy:            #364857;
+$text-blue:       #b8c6d1;
+$green:           #00b763;
+$highlight-green: #05c76e;
+$dark-green:      #00884a;
+
+/* White with blue accents */ 
+
+$blue:            #57A5B8;
+$dark-blue:       #3f8da0;
+$highlight-blue:  #8BBDCA;
+
+/* ------------------- Mixins ------------------- */
+
+@mixin border-radius {
+  $radius:5px;
+  border-radius: $radius; 
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin box-shadow {
+  $alpha:0.1;
+  box-shadow:         0 1px 2px rgba(0,0,0,$alpha);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,$alpha);
+  -moz-box-shadow:    0 1px 2px rgba(0,0,0,$alpha);
+}
+
+/* ------------------- Imports ------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import "fullwidth.scss";
+@import "contained.scss";
+
+/* ------------------- Base ------------------- */
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html {
+  font-size:1em; /* 16px */
+  line-height:1.5; /* 24px baseline */
+}
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background:$medium-grey;
+  color:#555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+.container {
+  width:960px;
+  position:relative;
+  margin:0 auto;
+}
+p, h1, h2, ul, input, .logo {
+  margin-bottom:24px;
+  margin-bottom:1.5rem;
+}
+p {
+  font-size:1em;
+  line-height:1.5;
+}
+h1, h2 {
+  font-family:"Open Sans", sans-serif;
+  font-weight:700;
+  margin-top:0;
+}
+h1, .h1 {
+  font-size:36px;
+  font-size:2.25rem;
+  line-height:1.33333;
+}
+h2, .h2 {
+  font-size:26px;
+  font-size:1.625rem;
+  line-height:1.6;
+}
+p.intro {
+  font-size:1.25em;
+  line-height:1.5;
+}
+a {
+  color:$green;
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:underline;
+}
+.button, 
+input {
+  font-family:"Open Sans", sans-serif;
+  font-weight:300;
+}
+.button {
+  width:200px;
+  background:$green;
+  color:#fff;
+  padding:20px 0 15px;
+  cursor:pointer;
+  border:0;
+  box-shadow:         0 5px 0 $dark-green;
+  -webkit-box-shadow: 0 5px 0 $dark-green;
+  -moz-box-shadow:    0 5px 0 $dark-green;
+  @include border-radius;
+}
+.button:hover {
+  background:$highlight-green;
+}
+form {
+  input {
+    color:#999;
+    font-size:1.2em;
+    padding:0 20px;
+    border:0;
+    padding:20px;
+    margin-left:10px;
+    border:1px solid #eee;
+  }
+  input.email {
+    background:$medium-grey;
+    width:400px;
+  }
+}
+.logo {
+  font-size:1.5em;
+  font-weight:200;
+  line-height:1.5;
+}
+ul.social > li {
+  list-style:none;
+  font-size:2em;
+  float:right;
+  margin-left:10px;
+  line-height:1.5;
+}
+ul.social > li > a {
+  color:#999;
+}
+ul.social > li > a:hover {
+  color:$green;
+  text-decoration:none;
+}
+
+/* ------------------- Grid ------------------- */
+
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+.span12 { width: 960px; }
+.span11 { width: 860px; }
+.span10 { width: 780px; }
+.span9  { width: 700px; }
+.span8  { width: 620px; }
+.span7  { width: 540px; }
+.span6  { width: 460px; }
+.span5  { width: 380px; }
+.span4  { width: 300px; }
+.span3  { width: 220px; }
+.span2  { width: 140px; }
+.span1  { width: 60px;  }
+
+@media (max-width: 1040px) {
+  .container {
+    width:724px;
+  }
+  .span12 { width: 724px; }
+  .span11 { width: 662px; }
+  .span10 { width: 600px; }
+  .span9  { width: 538px; }
+  .span8  { width: 476px; }
+  .span7  { width: 414px; }
+  .span6  { width: 352px; }
+  .span5  { width: 290px; }
+  .span4  { width: 228px; }
+  .span3  { width: 166px; }
+  .span2  { width: 104px; }
+  .span1  { width: 42px;  }
+}
+@media (max-width: 760px) {
+  .row {
+    margin:0;
+  }
+  [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+  .container {
+    text-align:center;
+    max-width:500px;
+    width:auto;
+  }
+  ul.social > li {
+    float:none;
+  }
+  form {
+    input,
+    input.button,
+    input.email {
+      max-width:500px;
+      width:100%;
+      margin:0 0 20px 0;
+    }
+  }
+}
+
+/* ------------------- Fonts ------------------- */
+
+/* icomoon.io */
+
+@font-face {
+  font-family: "icomoon";
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.woff') format('woff'),
+      url('../fonts/icomoon.ttf') format('truetype'),
+      url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-github, .icon-dribbble, .icon-twitter, .icon-facebook {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-github:before {
+  content: "\e001";
+}
+.icon-dribbble:before {
+  content: "\e002";
+}
+.icon-twitter:before {
+  content: "\e003";
+}
+.icon-facebook:before {
+  content: "\e004";
+}

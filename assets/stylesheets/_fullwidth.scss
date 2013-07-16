@@ -1,0 +1,58 @@
+/* _fullwidth.scss */
+
+body.full-width {
+  header,
+  section#intro {
+    background:$navy;
+    color:$text-blue;
+  }
+  section {
+    padding:40px;
+  }
+  header {
+    padding:40px 0 0 0;
+    .logo {
+      color:#fff;
+    }
+    ul.social > li > a {
+      color:#fff;
+    }
+    ul.social > li > a:hover {
+      color:$green;
+    }
+  }
+  section#bottom {
+    padding:60px 40px;
+    text-align:center;
+    input[type="text"],
+    input[type="email"] {
+      background:#fff;
+    }
+  }
+  .mockup > img {
+    position:relative;
+    float:right;
+    width:100%;
+    margin-bottom:-50px;
+  }
+  @media (max-width: 1040px) {
+    .mockup > img {
+      float:left;
+    }
+  }
+  @media (max-width: 760px) {
+    header {
+      padding:20px 0 0 0;
+      text-align:center;
+    }
+    section {
+      padding:0 40px 20px;
+    }
+    section#bottom {
+      padding:40px;
+    }
+    .mockup img {
+      display:none;
+    }
+  }
+}

@@ -46,6 +46,18 @@ seriously... go wild... don't hold back.
 If you want to use SCSS, any files in `assets/stylesheets` with a `.scss` extension
 will be automatically compiled.
 
+We've given you two basic layouts to start with:
+
+1. A full width layout, where we've included an example mockup graphic. You can
+find this one at [Pixeden](http://www.pixeden.com/psd-mock-up-templates/imac-macbook-psd-flat-mockup)
+or get creative and use your own!
+
+2. A minimal contained layout, great for expansive background images.
+
+Each layout has its own .scss file, which is imported into the main stylesheet.
+Here, we've also included a very simple responsive grid, inspired by Bootstrap
+- add to or expand on this as you please!
+
 ## Hosting
 
 You can host this anywhere that supports Rack apps.  Just pushing it to Heroku
