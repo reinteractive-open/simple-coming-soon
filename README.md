@@ -43,6 +43,9 @@ You can put whatever CSS and images you want in the `public` directory and inclu
 them in your layout file, we've added some design goodness to give you a kickstart...
 seriously... go wild... don't hold back.
 
+If you want to use SCSS, any files in `assets/stylesheets` with a `.scss` extension
+will be automatically compiled.
+
 ## Hosting
 
 You can host this anywhere that supports Rack apps.  Just pushing it to Heroku

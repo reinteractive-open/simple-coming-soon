@@ -1,3 +1,4 @@
 tmp/
 .powrc
 .ruby-gemset
+.sass-cache
