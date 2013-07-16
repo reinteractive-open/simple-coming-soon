@@ -1,26 +1,4 @@
-<div class='block padded'>
-  <p class='intro'>
-    We are in the process of creating a cloud-based app that you will love!
-  </p>
-  <p class='intro'>
-    We would tell you more... but you should just sign up to find out!
-  </p>
-  <p class="intro">
-    If you would like to be kept informed of our progress, or be part of our beta testing, please register your interest below...
-  </p>
-</div>
-
-<div class='block padded'>
-  <p id="coming-soon-message">
-    <span>Super App Beta List</span>
-    Register with your email address here to gain access to advanced notice of when we are going live.
-  </p>
-
-  <%= erb(:form, :layout => false) %>
-
-  <p class="intro">
-    You can always contact us at
-    <a href="mailto:<%= @email_address%>"><%= @email_address%></a>
-  </p>
-
-</div>
+<p>
+  Register with your email address here to gain access to advanced notice of when we are going live.
+</p>
+<%= erb(:form, :layout => false) %>

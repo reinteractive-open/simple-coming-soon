@@ -4,16 +4,51 @@
   <title><%= @title %></title>
   <script src="/jquery-1.7.min.js" type="text/javascript"></script>
   <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="/css/application.css" />
   <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css" />
 </head>
 
-<body>
-  <div class='block'>
-    <h1>We are coming soon!</h1>
-  </div>
+<body class="full-width">
 
-  <%= yield %>
-
+  <!-- Full width template -->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="logo span6">Your Logo</div>
+        <ul class="span6 social">
+          <li><a href="#"><span aria-hidden="true" class="icon-twitter"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section id='intro'>
+    <div class='container'>
+      <div class="row">
+        <div class="span5">
+          <h1>We are coming soon!</h1>
+          <p>
+            We are in the process of creating a cloud-based app that you will love!
+            We would tell you more... but you should just sign up to find out!
+          </p>
+          <p>
+            If you would like to be kept informed of our progress, or be part of our beta testing, please register your interest below...
+          </p>
+        </div>
+        <div class="span7 mockup">
+          <img src='images/mockup-imac.png'/>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="bottom">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
